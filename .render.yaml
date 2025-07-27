@@ -1,0 +1,16 @@
+build:
+  environment: python
+  pythonVersion: 3.10.13
+
+services:
+  - type: web
+    name: sprachwechsler-gpt
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python main.py
+    envVars:
+      - key: BOT_TOKEN
+        value: 8019650479:AAFvejeiI76Ed-fVc8JUjSz3U63appapWOA
+      - key: OPENAI_API_KEY
+        value: sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+    plan: free
